@@ -20,9 +20,6 @@ const HeaderPage = () => {
                 <img src="/src/assets/logo-w.webp" alt="logoJIB" className="ImgLogo" />
             </a>
         </div>
-        <div>
-            {Roles.role}
-        </div>
         <div className="col-lg-1 item-logout">
           {!token ? <></> : <a onClick={handleRemove}>Logout</a>}
         </div>
