@@ -1,0 +1,25 @@
+.menu-bar {
+  background-color: #1988f7;
+  display: flex;
+  justify-content: space-between;
+  box-sizing: border-box;
+  height: 60px;
+}
+
+.ImgLogo {
+  width: 100px;
+  height: 58px;
+}
+
+.item-logout {
+  color: white;
+  background-color: transparent;
+  font-size: 18px;
+  align-items: center;
+  padding: 14px 20px;
+  text-align: center;
+}
+
+.item-logout a:hover {
+  cursor: pointer;
+}
