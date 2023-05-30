@@ -3,21 +3,20 @@
   display: flex;
   justify-content: space-between;
   box-sizing: border-box;
-  height: 60px;
+  height: 70px;
 }
 
 .ImgLogo {
   width: 100px;
-  height: 58px;
 }
 
 .item-logout {
   color: white;
   background-color: transparent;
   font-size: 18px;
-  align-items: center;
-  padding: 14px 20px;
+  padding: 20px;
   text-align: center;
+  align-items: center;
 }
 
 .item-logout a:hover {
