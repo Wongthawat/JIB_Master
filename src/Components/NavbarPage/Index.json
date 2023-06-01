@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Home",
+    "path": "HomePage"
+  },
+  {
+    "title": "Image_Banner",
+    "path": "ImageBanner"
+  },
+  {
+    "title": "Product_ComSet",
+    "path": "ProductComSet"
+  },
+  {
+    "title": "Product_Laptops",
+    "path": "ProductLaptops"
+  },
+  {
+    "title": "Product_List",
+    "path": "ProductList"
+  },
+  {
+    "title": "Product_Title_Bar",
+    "path": "ProductTitleBar"
+  },
+  {
+    "title": "Carousel_Card",
+    "path": "CarouselCard"
+  }
+]

@@ -1,24 +1,17 @@
-.menu-bar {
-  background-color: #1988f7;
-  display: flex;
-  justify-content: space-between;
-  box-sizing: border-box;
-  height: 70px;
-}
-
 .ImgLogo {
-  width: 100px;
+    margin-left: 50%;
+    width: 100px;
 }
 
 .item-logout {
-  color: white;
-  background-color: transparent;
-  font-size: 18px;
-  padding: 20px;
-  text-align: center;
-  align-items: center;
+    color: white;
+    background-color: transparent;
+    font-size: 18px;
+    padding: 20px;
+    text-align: center;
+    align-items: center;
 }
 
-.item-logout a:hover {
-  cursor: pointer;
+.item-logout span:hover {
+    cursor: pointer;
 }

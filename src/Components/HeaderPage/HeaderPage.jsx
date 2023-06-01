@@ -1,6 +1,7 @@
 import React from "react";
-import { Nav } from "react-bootstrap/";
+import { AppBar, Toolbar, Typography } from "@mui/material";
 import "./HeaderPage.css";
+import { Gradient } from "@mui/icons-material";
 
 const HeaderPage = () => {
   let token = window.localStorage.getItem("accessToken");
@@ -9,22 +10,27 @@ const HeaderPage = () => {
     localStorage.removeItem("accessToken");
     localStorage.removeItem("dataUser");
     localStorage.removeItem("roles");
-    location.href = "/LoginPage"
-  }
+    location.href = "/loginpage";
+  };
 
   return (
-    <div>
-      <Nav className="menu-bar">
-        <div className="col-lg-2 text-center">
-            <a href="">
-                <img src="/src/assets/logo-w.webp" alt="logoJIB" className="ImgLogo" />
-            </a>
-        </div>
-        <div className="col-lg-1 item-logout">
-          {!token ? <></> : <a onClick={handleRemove}>Logout</a>}
-        </div>
-      </Nav>
-    </div>
+    <>
+      <AppBar sx={{ zIndex: (theme) => theme.zIndex.drawer + 1, background: 'linear-gradient(to right bottom, #36EAEF, #6B0AC9)'}}>
+        <Toolbar>
+          <Typography variant="h6" component="div" sx={{ flexGrow: 0 }}>
+            <img src="/src/assets/logo-w.webp" alt="" className="ImgLogo" />
+          </Typography>
+          <Typography sx={{ flexGrow: 1 }}></Typography>
+          {!token ? (
+            <></>
+          ) : (
+            <div className="item-logout" onClick={handleRemove}>
+              <span className="">LOGOUT</span>
+            </div>
+          )}
+        </Toolbar>
+      </AppBar>
+    </>
   );
 };
 

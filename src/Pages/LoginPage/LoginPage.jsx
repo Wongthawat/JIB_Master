@@ -21,7 +21,7 @@ const LoginPage = () => {
         localStorage.setItem("dataUser", JSON.stringify(response?.data))
         localStorage.setItem("accessToken", response?.data?.accessToken);
         localStorage.setItem("roles", JSON.stringify(response?.data?.roles))
-        location.href = "/HomePage"
+        location.href = "/homepage"
       }
     } catch (error) {
       
