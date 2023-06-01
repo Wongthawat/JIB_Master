@@ -13,6 +13,8 @@ const Grid = (props) => {
           columns={Columns}
           paginationModel={props.paginationModel}
           onPaginationModelChange={props.onPaginationModelChange}
+          rowHeight={props.rowHeight}
+          
         />
       </div>
     </>
