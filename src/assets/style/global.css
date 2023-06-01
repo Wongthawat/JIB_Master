@@ -1,0 +1,16 @@
+::-moz-selection {
+  /* Code for Firefox */
+  color: white !important;
+  background: #3390ff !important;
+}
+
+::selection {
+  /* color: red !important; */
+  /* background: yellow !important; */
+  color: white !important;
+  background: #3390ff !important;
+}
+
+.ant-card-body {
+  padding: 12px !important;
+}
