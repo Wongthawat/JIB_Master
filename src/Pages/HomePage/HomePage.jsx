@@ -23,26 +23,21 @@ const HomePage = () => {
   });
 
   const columns = [
-    { dataIndex: "id", title: "No", key: "id"},
-    { dataIndex: "title", title: "Name", key: "title" },
-    { dataIndex: "actors", title: "Actors", key: "id" },
-    { dataIndex: "year", title: "Year", key: "id" },
-    { dataIndex: "plot", title: "Plot", key: "id" },
-    { dataIndex: "runtime", title: "Runtime", key: "id" },
-    { dataIndex: "director", title: "Director", key: "id" },
-    // {
-    //   name: "status",
-    //   header: "Status",
-    //   render: ({ value }) => {
-    //     return (
-    //       <Form.Check
-    //         type="switch"
-    //         defaultChecked={value}
-    //         className="text-center"
-    //       />
-    //     );
-    //   },
-    // },
+    { dataIndex: "key", title: "No", key: "key" },
+    { dataIndex: "title", 
+      title: "Name", 
+      key: "title", 
+      sorter: { compare: (a, b) => a.title - b.title }
+    },
+    { dataIndex: "actors", title: "Actors", key: "actors" },
+    { dataIndex: "year",
+      title: "Year",
+      key: "year",
+      sorter: { compare: (a, b) => a.year - b.year, multiple: 2 },
+    },
+    { dataIndex: "plot", title: "Plot", key: "plot" },
+    { dataIndex: "runtime", title: "Runtime", key: "runtime" },
+    { dataIndex: "director", title: "Director", key: "director" },
   ];
 
   return (
@@ -60,7 +55,7 @@ const HomePage = () => {
         </div>
         <Card className="w-100 shadow">
           <Grid
-            pagination={{ position: 'bottomRight' }}
+            pagination={{ position: "bottomRight" }}
             Items={dataSearch}
             Columns={columns}
           />

@@ -17,6 +17,8 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.0",
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@headlessui/react": "^1.7.15",
+    "@heroicons/react": "^2.0.18",
     "@inovua/reactdatagrid-community": "^5.9.3",
     "@inovua/reactdatagrid-enterprise": "^5.9.3",
     "@mui/icons-material": "^5.11.16",
@@ -32,6 +34,7 @@
     "react-icons": "^4.9.0",
     "react-router-dom": "^6.11.2",
     "styled-components": "^5.3.11",
+    "tailwindcss": "^3.3.2",
     "yarn": "^1.22.19"
   },
   "devDependencies": {

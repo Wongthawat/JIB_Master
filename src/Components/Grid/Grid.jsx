@@ -1,7 +1,7 @@
 import React from "react";
 import { Table } from 'antd';
-import ReactDataGrid from "@inovua/reactdatagrid-community";
-import "@inovua/reactdatagrid-community/index.css";
+// import ReactDataGrid from "@inovua/reactdatagrid-community";
+// import "@inovua/reactdatagrid-community/index.css";
 
 const Grid = (props) => {
   const ItemData = props.Items;
@@ -11,24 +11,12 @@ const Grid = (props) => {
     <>
       <div className="w-100 p-2">
         <Table
-          key={props.Id}
           columns={Columns}
           pagination={props.pagination}
           dataSource={ItemData}
+          scroll={props.scroll}
+          bordered
         />
-        {/* <ReactDataGrid
-          idProperty="id"
-          columns={Columns}
-          dataSource={ItemData}
-          pagination
-          defaultLimit={props.defaultLimit}
-          style={props.gridStyle}
-          defaultFilterValue={props.defaultFilterValue}
-          editable={props.editable}
-          checkboxColumn={props.checkboxColumn}
-          selected={props.selected}
-          onSelectionChange={props.onSelectionChange}
-        /> */}
       </div>
     </>
   );
