@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 import Card from "@mui/material/Card";
 import Grid from "../../Components/Grid/Grid";
 
@@ -23,30 +23,46 @@ const HomePage = () => {
   });
 
   const columns = [
-    { field: 'id', headerName: 'ID', width: 100 },
-    { field: 'title', headerName: 'Title', width: 200 },
-    { field: 'year', headerName: 'Year', type:'number', width: 100 },
-    { field: 'actors', headerName: 'Actors', type: 'text', width: 500, editable: true }
+    { dataIndex: "id", title: "No", key: "id"},
+    { dataIndex: "title", title: "Name", key: "title" },
+    { dataIndex: "actors", title: "Actors", key: "id" },
+    { dataIndex: "year", title: "Year", key: "id" },
+    { dataIndex: "plot", title: "Plot", key: "id" },
+    { dataIndex: "runtime", title: "Runtime", key: "id" },
+    { dataIndex: "director", title: "Director", key: "id" },
+    // {
+    //   name: "status",
+    //   header: "Status",
+    //   render: ({ value }) => {
+    //     return (
+    //       <Form.Check
+    //         type="switch"
+    //         defaultChecked={value}
+    //         className="text-center"
+    //       />
+    //     );
+    //   },
+    // },
   ];
-
-  const [paginationModel, setPaginationModel] = useState({
-    pageSize: 25,
-    page: 0,
-  });
 
   return (
     <>
       <div className="HomeBody">
-        <div className="w-100 p-3">
-          <Form.Control onChange={searchText} placeholder="Search" />
+        <div className="w-100 p-3 row mx-0">
+          <span className="col-lg-10 px-1">
+            <Form.Control onChange={searchText} placeholder="Search Text" />
+          </span>
+          <span className="col-lg-2 px-1">
+            <Button className="w-100" variant="success">
+              เพิ่มรายการ
+            </Button>
+          </span>
         </div>
         <Card className="w-100 shadow">
-          <Grid 
-          Items={dataSearch} 
-          Columns={columns} 
-          HeightTable={650}
-          paginationModel={paginationModel}
-          onPaginationModelChange={setPaginationModel}
+          <Grid
+            pagination={{ position: 'bottomRight' }}
+            Items={dataSearch}
+            Columns={columns}
           />
         </Card>
       </div>

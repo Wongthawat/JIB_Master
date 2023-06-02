@@ -36,25 +36,21 @@ const BannerPage = () => {
     );
   });
 
-  const [paginationModel, setPaginationModel] = useState({
-    pageSize: 10,
-    page: 0,
-  });
-
   const columns = [
-    { field: "id", headerName: "ID", width: 100 },
-    { field: "fname", headerName: "Username", width: 200, editable: true },
-    { field: "lname", headerName: "Lastname", width: 200, editable: true },
-    { field: "username", headerName: "Email", width: 250, editable: true },
-    {
-      field: "avatar",
-      headerName: "Profile",
-      width: 100,
-      renderCell: (params) => (
-        <img src={params.value} alt="" className="img-fluid" />
-      ),
-    },
+    { name: "id", header: "No", defaultWidth: 100 },
+    { name: "fname", header: "Name", defaultWidth: 200, editable: true },
+    { name: "lname", header: "Lastname", defaultWidth: 200, editable: true },
+    { name: "username", header: "Email", defaultWidth: 300, editable: true },
   ];
+
+  const filterValue = [
+    { name: "fname", operator: "contains", type: "string" },
+    { name: "lname", operator: "contains", type: "string" },
+    { name: "runtime", operator: "contains", type: "string" },
+    { name: "username", operator: "contains", type: "string" },
+  ];
+
+  const gridStyle = { minHeight: 600 };
 
   return (
     <>
@@ -63,14 +59,14 @@ const BannerPage = () => {
           <Form.Control onChange={searchText} placeholder="Search" />
         </div>
         <Card className="w-100 shadow">
-          <Grid
+        {/* <Grid
             Items={dataSearch}
             Columns={columns}
-            rowHeight={100}
-            HeightTable={650}
-            paginationModel={paginationModel}
-            onPaginationModelChange={setPaginationModel}
-          />
+            defaultLimit={25}
+            gridStyle={gridStyle}
+            defaultFilterValue={filterValue}
+            editable={false}
+          /> */}
         </Card>
       </div>
     </>
