@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Form, Button } from "react-bootstrap/";
 import axios from "axios";
+
 import { BASE_URL } from "../../Services/apiURL"
 import ImgBG from "../../assets/bg_login.jpg";
-import "./LoginPage.css";
 
 
 const LoginPage = () => {
@@ -31,23 +31,23 @@ const LoginPage = () => {
   return (
     <div className="row">
       <div className="col-lg-8 col-md-6 ">
-        <img src={ImgBG} alt="ImgLogin" className="ImgBox" />
+        <img src={ImgBG} alt="ImgLogin" className="h-screen w-full" />
       </div>
-      <div className="col-lg-4 col-md-6 BoxLogin">
-        <div className="mx-5 StyBoxLogin">
+      <div className="col-lg-4 col-md-6 mt-64">
+        <div className="mx-5 p-4 rounded-xl bg-gray-100 shadow-lg shadow-red-500/95">
           <h4 className="text-center">เข้าสู่ระบบ</h4>
           <Form className="px-5">
             <Form.Group className="my-2">
               <Form.Label className=""> Username : </Form.Label>
-              <Form.Control type="text" placeholder="ป้อนชื่อเข้าสู่ระบบ" onChange={(e) => setUsername(e.target.value)} />
+              <Form.Control type="text" placeholder="ป้อนชื่อเข้าสู่ระบบ" onChange={(e) => setUsername(e.target.value)} className="border-3 focus:border-indigo-500" />
             </Form.Group>
             <Form.Group className="my-2">
               <Form.Label className=""> Password : </Form.Label>
-              <Form.Control type="password" placeholder="ป้อนรหัสเข้าสู่ระบบ" onChange={(e) => setPassword(e.target.value)} />
+              <Form.Control type="password" placeholder="ป้อนรหัสเข้าสู่ระบบ" onChange={(e) => setPassword(e.target.value)} className="border-3 focus:border-indigo-500" />
             </Form.Group>
             <Form.Group className="my-2 text-center">
-              <Button className="btnSuccess mx-1" variant="secondary" onClick={handleSubmit}> เข้าสู่ระบบ </Button>
-              <Button className="btnCancel mx-1" variant="outline-secondary" type="reset"> ยกเลิก </Button>
+              <Button className="bg-green-700 hover:bg-green-600 border-none w-full my-1" onClick={handleSubmit}> เข้าสู่ระบบ </Button>
+              <Button className="bg-red-700 hover:bg-red-600 border-none w-full my-1" type="reset"> ยกเลิก </Button>
             </Form.Group>
           </Form>
         </div>

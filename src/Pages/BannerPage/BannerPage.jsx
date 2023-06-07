@@ -37,20 +37,11 @@ const BannerPage = () => {
   });
 
   const columns = [
-    { name: "id", header: "No", defaultWidth: 100 },
-    { name: "fname", header: "Name", defaultWidth: 200, editable: true },
-    { name: "lname", header: "Lastname", defaultWidth: 200, editable: true },
-    { name: "username", header: "Email", defaultWidth: 300, editable: true },
+    { dataIndex: "id", title: "No", key: "id" },
+    { dataIndex: "fname", title: "Name", key: "name", sorter: { compare: (a, b) => a.title - b.title }},
+    { dataIndex: "lname", title: "Lastname", key: "lastname" },
+    { dataIndex: "username", title: "Email", key: "email" },
   ];
-
-  const filterValue = [
-    { name: "fname", operator: "contains", type: "string" },
-    { name: "lname", operator: "contains", type: "string" },
-    { name: "runtime", operator: "contains", type: "string" },
-    { name: "username", operator: "contains", type: "string" },
-  ];
-
-  const gridStyle = { minHeight: 600 };
 
   return (
     <>
@@ -59,13 +50,10 @@ const BannerPage = () => {
           <Form.Control onChange={searchText} placeholder="Search" />
         </div>
         <Card className="w-100 shadow">
-        {/* <Grid
+          {/* <Grid
+            pagination={{ position: "bottomRight" }}
             Items={dataSearch}
             Columns={columns}
-            defaultLimit={25}
-            gridStyle={gridStyle}
-            defaultFilterValue={filterValue}
-            editable={false}
           /> */}
         </Card>
       </div>
